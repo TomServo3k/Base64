@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+        <div>
+            Text to Encode: <input id="encode-text" type="text" />
+            <button onclick="encode()">Encode</button>
+            <span id="encoded-value"></span>
+        </div>
+        <br/>
+        <div>
+            Text to Decode: <input id="decode-text" type="text" />
+            <button onclick="decode()">Decode</button>
+            <span id="decoded-value"></span>
+        </div>
+
+        <script>
+            function encode() {
+                const elem = document.getElementById('encode-text');
+                const encoded = window.btoa(elem.value);
+                const disp = document.getElementById('encoded-value');
+                disp.innerHTML = ' &nbsp; ' + encoded;
+            }
+            function decode() {
+                const elem = document.getElementById('decode-text');
+                const decoded = window.atob(elem.value);
+                const disp = document.getElementById('decoded-value');
+                disp.innerHTML = ' &nbsp; ' + decoded;
+            }
+        </script>
+    </body>
+    <body>
+</html>
